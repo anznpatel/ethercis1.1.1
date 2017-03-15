@@ -1,0 +1,75 @@
+Attaching to dockerethercis_postgres_1, dockerethercis_app_1
+[36mpostgres_1  |[0m LOG:  database system was shut down at 2016-12-10 20:14:24 UTC
+[33mapp_1       |[0m wait-for-it.sh: waiting 60 seconds for postgres:5432
+[36mpostgres_1  |[0m LOG:  MultiXact member wraparound protections are now enabled
+[33mapp_1       |[0m wait-for-it.sh: postgres:5432 is available after 0 seconds
+[36mpostgres_1  |[0m LOG:  database system is ready to accept connections
+[36mpostgres_1  |[0m LOG:  autovacuum launcher started
+[33mapp_1       |[0m populating concept table
+[36mpostgres_1  |[0m LOG:  incomplete startup packet
+[33mapp_1       |[0m ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+[33mapp_1       |[0m log4j:WARN Continuable parsing error 3 and column 15
+[33mapp_1       |[0m log4j:WARN Document root element "Configuration", must match DOCTYPE root "null".
+[33mapp_1       |[0m log4j:WARN Continuable parsing error 3 and column 15
+[33mapp_1       |[0m log4j:WARN Document is invalid: no grammar found.
+[33mapp_1       |[0m log4j:ERROR DOM element is - not a <log4j:configuration> element.
+[33mapp_1       |[0m log4j:WARN No appenders could be found for logger (org.jooq.Constants).
+[33mapp_1       |[0m log4j:WARN Please initialize the log4j system properly.
+[33mapp_1       |[0m log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+[36mpostgres_1  |[0m ERROR:  update or delete on table "concept" violates foreign key constraint "entry_category_fkey" on table "entry"
+[36mpostgres_1  |[0m DETAIL:  Key (id)=(62f68f5b-7e18-4222-990c-b3fe6ba535e7) is still referenced from table "entry".
+[36mpostgres_1  |[0m STATEMENT:  delete from "ehr"."concept"
+[33mapp_1       |[0m Exception in thread "main" java.lang.IllegalArgumentException: Could not updateComposition table, exception:org.jooq.exception.DataAccessException: SQL [delete from "ehr"."concept"]; ERROR: update or delete on table "concept" violates foreign key constraint "entry_category_fkey" on table "entry"
+[33mapp_1       |[0m   Detail: Key (id)=(62f68f5b-7e18-4222-990c-b3fe6ba535e7) is still referenced from table "entry".
+[33mapp_1       |[0m 	at com.ethercis.dao.access.support.TerminologySetter.main(TerminologySetter.java:427)
+[33mapp_1       |[0m ethercis startup
+[33mapp_1       |[0m 	... 14 more
+[33mapp_1       |[0m log4j:WARN Continuable parsing error 3 and column 15
+[33mapp_1       |[0m log4j:WARN Document root element "Configuration", must match DOCTYPE root "null".
+[33mapp_1       |[0m log4j:WARN Continuable parsing error 3 and column 15
+[33mapp_1       |[0m log4j:WARN Document is invalid: no grammar found.
+[33mapp_1       |[0m log4j:ERROR DOM element is - not a <log4j:configuration> element.
+[33mapp_1       |[0m log4j:WARN No appenders could be found for logger (org.springframework.core.env.StandardEnvironment).
+[33mapp_1       |[0m log4j:WARN Please initialize the log4j system properly.
+[33mapp_1       |[0m log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+[33mapp_1       |[0m Property: Added 0 property pairs
+[33mapp_1       |[0m Listening for transport dt_socket at address: 8000
+[33mapp_1       |[0m ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+[33mapp_1       |[0m SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+[33mapp_1       |[0m SLF4J: Defaulting to no-operation (NOP) logger implementation
+[33mapp_1       |[0m SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[33mapp_1       |[0m Property: File 'services.properties' not found
+[33mapp_1       |[0m Property: could not find default property file, will try from command line arguments
+[33mapp_1       |[0m Property: No args array given.
+[33mapp_1       |[0m Property: Loading /etc/opt/ecis/services.properties from directory /home/ethercis
+[33mapp_1       |[0m Property: Added 3 property pairs
+[33mapp_1       |[0m 20:16:17.271 [main] ERROR com.ethercis.servicemanager.jmx.JmxWrapper - JMX registration problem for 'com.ethercis:nodeClass=node,node="logging"': javax.management.NotCompliantMBeanException: Bad getMBeanInfo()
+[33mapp_1       |[0m javax.management.NotCompliantMBeanException: Bad getMBeanInfo()
+[33mapp_1       |[0m 	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getNewMBeanClassName(DefaultMBeanServerInterceptor.java:336)
+[33mapp_1       |[0m 	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:319)
+[33mapp_1       |[0m 	at com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:522)
+[33mapp_1       |[0m 	at com.ethercis.servicemanager.jmx.JmxWrapper.registerMBean(JmxWrapper.java:693)
+[33mapp_1       |[0m 	at com.ethercis.servicemanager.jmx.JmxWrapper.registerMBean(JmxWrapper.java:673)
+[33mapp_1       |[0m 	at com.ethercis.servicemanager.jmx.JmxWrapper.<init>(JmxWrapper.java:177)
+[33mapp_1       |[0m 	at com.ethercis.servicemanager.jmx.JmxWrapper.getInstance(JmxWrapper.java:123)
+[33mapp_1       |[0m 	at com.ethercis.servicemanager.cluster.RunTimeSingleton.getJmxWrapper(RunTimeSingleton.java:255)
+[33mapp_1       |[0m 	at com.ethercis.servicemanager.cluster.RunTimeSingleton.registerMBean(RunTimeSingleton.java:304)
+[33mapp_1       |[0m 	at com.ethercis.servicemanager.runlevel.RunlevelManager.initJmx(RunlevelManager.java:123)
+[33mapp_1       |[0m 	at com.ethercis.servicemanager.cluster.RunTimeSingleton.getRunlevelManager(RunTimeSingleton.java:1614)
+[33mapp_1       |[0m 	at com.ethercis.vehr.VEhrGateServlet.init(VEhrGateServlet.java:233)
+[33mapp_1       |[0m 	at com.ethercis.vehr.Launcher.start(Launcher.java:108)
+[33mapp_1       |[0m 	at com.ethercis.vehr.Launcher.startServer(Launcher.java:77)
+[33mapp_1       |[0m 	at com.ethercis.vehr.Launcher.main(Launcher.java:194)
+[33mapp_1       |[0m Caused by: java.lang.NullPointerException
+[33mapp_1       |[0m 	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getNewMBeanClassName(DefaultMBeanServerInterceptor.java:333)
+[33mapp_1       |[0m 	... 14 more
+[33mapp_1       |[0m log4j:WARN Continuable parsing error 3 and column 15
+[33mapp_1       |[0m log4j:WARN Document root element "Configuration", must match DOCTYPE root "null".
+[33mapp_1       |[0m log4j:WARN Continuable parsing error 3 and column 15
+[33mapp_1       |[0m log4j:WARN Document is invalid: no grammar found.
+[33mapp_1       |[0m log4j:ERROR DOM element is - not a <log4j:configuration> element.
+[33mapp_1       |[0m log4j:WARN No appenders could be found for logger (org.springframework.core.env.StandardEnvironment).
+[33mapp_1       |[0m log4j:WARN Please initialize the log4j system properly.
+[33mapp_1       |[0m log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+[33mapp_1       |[0m Property: Added 0 property pairs
+Gracefully stopping... (press Ctrl+C again to force)

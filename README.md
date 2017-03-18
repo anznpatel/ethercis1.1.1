@@ -3,7 +3,7 @@ This is a docker container for <a href="https://github.com/ethercis/ethercis" ta
 
 ## Build Status
 
-<img src="https://anpether.visualstudio.com/_apis/public/build/definitions/01417fa5-d121-448e-acdd-e6a1c302632e/1/badge"/>
+<img src="https://aethercis.visualstudio.com/_apis/public/build/definitions/2029b45d-6729-4066-afa6-6eb91653e010/1/badge"/>
 
 ## Setup locally
 
@@ -22,7 +22,7 @@ This is a docker container for <a href="https://github.com/ethercis/ethercis" ta
 7. You can now connect to the RESTful API via ``` {docker-ip}:8080/{rest-query} ```
 
 ## Deployment
-*Prerequisites: To create a secure cluster you pass your SSH public key during deployment*
+*Prerequisites: To create a secure cluster you need to pass your SSH public key during deployment*
 
 Click the button below to deploy this application on Azure.
 
@@ -32,12 +32,24 @@ Click the button below to deploy this application on Azure.
 
 ### Next steps
 1. Go to 'Manage Resources' in your Azure Portal and click on the new resource group you created
-2. Click on the master-vm and select 'Network Interfaces' 
-  * Dissociate the IP by clicking on the ... in the right corner
-  * Disable NSG settings
+2. Fork this repo and edit the **docker-compose.env.production.yml** file, replace the letters "aethercis" to your username that you set during deployment
+2. Click on the **containerservice-ethercis** and select 'Releases' 
+  * Get started via Github
+  * Authenticate your Github account and select the forked repo from your Github account
+  * Define the VSTS project name and account name and select 'create'
+  * Wait for the Continous Deployment pipeline to succeed
+3. Go to **visualstudio.com** and locate the account you created, open the project related to that account
+4. Click on 'Build and Release', wait for the build to be successful
+5. Click on 'Releases' and double click on 'Release-1' - the project will automatically deploy in the **Dev** environment
+6. Select the **Deploy** button and deploy to the Production environment
 
 ## API
 
+* An example API call to test if your server is running would be:
+   ``` 
+   curl -X POST -H "Auth-Token: {{Auth-Token}}" -H "Cache-Control: no-cache" -H "Postman-Token: f4190d7a-12ea-6fdb-5b73-09206aa8639c" -d '' "http://aethercisagents.westus.cloudapp.azure.com:80/rest/v1/session?username=guest&password=guest"
+    
+   ```
 * EtherCIS uses a RESTful API similar to the <a href="https://code4health.org/platform/open_interfaces_apis/ehrscape/ehrscape_api_reference" target="_blank">Ehrscape API.</a>
 * The Docker image contains no data upon startup. Data can be imported into the application and Postgres database using the various queries described in the Ehrscape API.
 

@@ -38,9 +38,9 @@ Click the button below to deploy this application on Azure.
   * Authenticate your Github account and select the forked repo from your Github account
   * Define the VSTS project name and account name and select 'create'
   * Wait for the Continous Deployment pipeline to succeed
-3. Go to **visualstudio.com** and locate the account you created, open the project related to that account
-4. Click on 'Build and Release', wait for the build to be successful
-5. Click on 'Releases' and double click on 'Release-1' - the project will automatically deploy in the **Dev** environment
+3. Visit **visualstudio.com** and locate the account you created, open the project related to that account
+4. Click on the 'Build and Release' button, wait for the build to be successful
+5. Select the 'Releases' tab and double click on 'Release-1' - the project will automatically deploy in the **Dev** environment
 6. Select the **Deploy** button and deploy to the Production environment
 
 ## API

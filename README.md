@@ -45,10 +45,9 @@ Click the button below to deploy this application on Azure.
 
 ## API
 
-* An example API call to test if your server is running would be:
+* To test whether the deployment was successful you can perform the following REST API call via command line. Don't forget to change the URL to that of your deployment.
    ``` 
-   curl -X POST -H "Auth-Token: {{Auth-Token}}" -H "Cache-Control: no-cache" -H "Postman-Token: f4190d7a-12ea-6fdb-5b73-09206aa8639c" -d '' "http://aethercisagents.westus.cloudapp.azure.com:80/rest/v1/session?username=guest&password=guest"
-    
+   curl -X POST -H "Auth-Token: {{Auth-Token}}" -H "Cache-Control: no-cache" -H "Postman-Token: f4190d7a-12ea-6fdb-5b73-09206aa8639c" -d '' "http://aethercisagents.westus.cloudapp.azure.com:80/rest/v1/session?username=guest&password=guest" 
    ```
 * EtherCIS uses a RESTful API similar to the <a href="https://code4health.org/platform/open_interfaces_apis/ehrscape/ehrscape_api_reference" target="_blank">Ehrscape API.</a>
 * The Docker image contains no data upon startup. Data can be imported into the application and Postgres database using the various queries described in the Ehrscape API.

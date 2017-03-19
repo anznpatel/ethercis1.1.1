@@ -1,5 +1,9 @@
 version: "2"
 
+#Definition of PostgreSQL data volume
+volumes:
+  data:
+  
 services:
 
   app:

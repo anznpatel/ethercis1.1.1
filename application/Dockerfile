@@ -50,4 +50,4 @@ WORKDIR /opt/ecis/bin
 CMD ./wait-for-it.sh postgres:5432 -t 60 && \
   ./populate-concept.sh && \
   ./ecis-server.sh start && \
-  tail -f /var/opt/ecis/ethercis_test.log
+  tail -f /dev/null

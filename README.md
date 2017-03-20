@@ -33,15 +33,15 @@ Click the button below to deploy this application on Azure.
 ### Next steps
 1. Go to 'Manage Resources' in your Azure Portal and click on the new resource group you created
 2. Fork this repo and edit the **docker-compose.env.production.yml** file, replace the letters "aethercis" to your username that you set during deployment
-2. Click on the **containerservice-ethercis** and select 'Releases' 
+3. Click on the **containerservice-resource_group_name** and select 'Releases' 
   * Get started via Github
   * Authenticate your Github account and select the forked repo from your Github account
   * Define the VSTS project name and account name and select 'create'
   * Wait for the Continous Deployment pipeline to succeed
-3. Visit **visualstudio.com** and locate the account you created, open the project related to that account
-4. Click on the 'Build and Release' button, wait for the build to be successful
-5. Select the 'Releases' tab and double click on 'Release-1' - the project will automatically deploy in the **Dev** environment
-6. Select the **Deploy** button and deploy to the Production environment
+4. Visit **visualstudio.com** and locate the account you created, open the project related to that account
+5. Click on the 'Build and Release' button, wait for the build to be successful
+6. Select the 'Releases' tab and double click on 'Release-1' - the project will automatically deploy in the **Dev** environment
+7. Select the **Deploy** button and deploy to the Production environment
 
 ## API
 

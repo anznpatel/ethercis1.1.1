@@ -1,8 +1,4 @@
 version: "2"
-
-#Definition of PostgreSQL data volume
-volumes:
-  data:
   
 services:
 
@@ -28,13 +24,6 @@ services:
     # Name image
     image: ethercis-db
     #Volume for postreSQL data
-    volumes:
-      - data:/var/lib/postgresql/data
-    #Environment variables configuring Postgres
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: ethercis
     ports:
       - "5432:5432"
     

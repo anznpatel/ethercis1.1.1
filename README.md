@@ -46,6 +46,7 @@ Click the button below to deploy this application on Azure.
 ## API
 
 * To test whether the deployment was successful you can perform the following REST API call via command line. Don't forget to change the URL to that of your deployment.
+   
    ``` 
    curl -X POST -H "Auth-Token: {{Auth-Token}}" -H "Cache-Control: no-cache" -H "Postman-Token: f4190d7a-12ea-6fdb-5b73-09206aa8639c" -d '' "http://aethercisagents.westus.cloudapp.azure.com:80/rest/v1/session?username=guest&password=guest" 
    ```

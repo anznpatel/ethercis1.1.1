@@ -30,7 +30,7 @@ Click the button below to deploy this application on Azure.
 </hr>
 <img width=500 src="https://github.com/anznpatel/ethercis1.1.1/raw/master/images/deployment.gif">
 
-<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F301-jenkins-acr-spinnaker-k8s%2Fazuredeploy.json" target="_blank">
+<a href="http://armviz.io/#/?load=https://raw.githubusercontent.com/anznpatel/ethercis1.1.1/master/azuredeploy.json" target="_blank">
     <img src="http://armviz.io/visualizebutton.png"/>
 </a>
 

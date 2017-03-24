@@ -30,9 +30,6 @@ Click the button below to deploy this application on Azure.
 </hr>
 <img width=500 src="https://github.com/anznpatel/ethercis1.1.1/raw/master/images/deployment.gif">
 
-<a href="http://armviz.io/#/?load=https://raw.githubusercontent.com/anznpatel/ethercis1.1.1/master/azuredeploy.json" target="_blank">
-    <img src="http://armviz.io/visualizebutton.png"/>
-</a>
 
 ### Next steps
 1. Go to 'Manage Resources' in your Azure Portal and click on the new resource group you created
